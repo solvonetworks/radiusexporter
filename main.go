@@ -57,7 +57,7 @@ func main() {
 		e := os.Remove("/tmp/fail.txt")
 		log.Fatal(err)
 	} else {
-		e := os.Create("/tmp/fail.txt")
+		myfile, e := os.Create("/tmp/fail.txt")
 	}
 
 	registry.MustRegister(collector.NewFreeRADIUSCollector(radiusClient))
