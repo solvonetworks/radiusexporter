@@ -54,10 +54,10 @@ func main() {
 
 	radiusClient, err := client.NewFreeRADIUSClient(*radiusAddr, hs, *radiusSecret, *radiusTimeout)
 	if err != nil {
-		os.Remove("/tmp/fail")
+		e := os.Remove("/tmp/fail")
 		log.Fatal(err)
 	} else {
-		os.Create("/tmp/fail")
+		e := os.Create("/tmp/fail")
 	}
 
 	registry.MustRegister(collector.NewFreeRADIUSCollector(radiusClient))
