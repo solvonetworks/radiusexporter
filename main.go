@@ -13,8 +13,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/bvantagelimited/freeradius_exporter/client"
-	"github.com/bvantagelimited/freeradius_exporter/collector"
+	"github.com/juanmoralesarias/registry/client"
+	"github.com/juanmoralesarias/registry/collector"
 )
 
 var version, commit, date string
