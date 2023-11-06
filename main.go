@@ -60,6 +60,7 @@ func main() {
 	} else {
 		myfile, e := os.Create("/tmp/fail.txt")
 		_ = myfile
+		_ = e
 	}
 
 	registry.MustRegister(collector.NewFreeRADIUSCollector(radiusClient))
