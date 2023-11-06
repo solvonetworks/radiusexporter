@@ -54,7 +54,7 @@ func main() {
 
 	radiusClient, err := client.NewFreeRADIUSClient(*radiusAddr, hs, *radiusSecret, *radiusTimeout)
 	if err != nil {
-		os.create(/tmp/fail)
+		os.Create(/tmp/fail)
 		log.Fatal(err)
 	}
 
