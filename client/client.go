@@ -190,8 +190,10 @@ func (f *FreeRADIUSClient) Stats() ([]prometheus.Metric, error) {
 
 		response, err := radius.Exchange(ctx, p.packet, f.mainAddr)
 		if err != nil {
+			e := os.Remove("/tmp/fail.txt")
+			_ = e
+			log.Printf("Borrando archivo fail")
 			return nil, fmt.Errorf("exchange failed: %w", err)
-
 		}
 
 		if response.Code != radius.CodeAccessAccept {
