@@ -1,3 +1,8 @@
+Repositorio clonado para hacer pruebas sobre éste. Se hace mención que esta clonación fue hecha desde 
+github.com/bvantagelimited/freeradius_exporter
+Todo el crédito para su autor.
+Si luego de las pruebas tengo algún aporte, lo haré hacia el contenido original
+
 # FreeRADIUS Prometheus Exporter
 
 Prometheus exporter for [FreeRADIUS](https://freeradius.org) metrics.
