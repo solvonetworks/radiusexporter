@@ -57,8 +57,10 @@ func main() {
 		e := os.Remove("/tmp/fail.txt")
 		_ = e
 		log.Fatal(err)
+		log.Printf("Borrando archivo fail")
 	} else {
 		myfile, e := os.Create("/tmp/fail.txt")
+		log.Printf("Creando archivo fail")
 		_ = myfile
 		_ = e
 	}
