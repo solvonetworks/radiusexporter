@@ -160,7 +160,7 @@ func NewFreeRADIUSClient(addr string, homeServers []string, secret string, timeo
 
 	// add home server stats
 	for _, hs := range homeServers {
-		if hs == "" {
+		if hs == "NONE" {
 			continue
 		}
 		packet, err := newPacket([]byte(secret), hs, radius.NewInteger(uint32(
