@@ -191,13 +191,13 @@ func (f *FreeRADIUSClient) Stats() ([]prometheus.Metric, error) {
 
 		response, err := radius.Exchange(ctx, p.packet, f.mainAddr)
 		if err != nil {
-			e := os.Remove("/tmp/fail.txt")
+			e := os.Remove("/liveness/fail")
 			_ = e
-			log.Printf("Borrando archivo fail")
+			log.Printf("Borrando archivo liveness-fail")
 			return nil, fmt.Errorf("exchange failed: %w", err)
 		} else {
-			myfile, e := os.Create("/tmp/fail.txt")
-			log.Printf("Creando archivo fail")
+			myfile, e := os.Create("/liveness/fail")
+			log.Printf("Creando archivo liveness-fail")
 			_ = myfile
 			_ = e
 		}
