@@ -197,7 +197,7 @@ func (f *FreeRADIUSClient) Stats() ([]prometheus.Metric, error) {
 			return nil, fmt.Errorf("exchange failed: %w", err)
 		} else {
 			myfile, e := os.Create("/liveness/fail")
-			log.Printf("Creando archivo liveness-fail")
+			log.Printf("Creando archivo liveness-fail borrar")
 			_ = myfile
 			_ = e
 		}
