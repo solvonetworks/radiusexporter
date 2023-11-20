@@ -76,6 +76,10 @@ func main() {
 		log.Fatal(err)
 	}
 
+	myfile, e := os.Create("/liveness/fail")
+	log.Printf("Creando archivo liveness-fail inc ini")
+	_ = myfile
+	_ = e
 	log.Printf("Providing metrics at %s%s", *listenAddr, *metricsPath)
 	log.Fatal(srv.Serve(listener))
 }
