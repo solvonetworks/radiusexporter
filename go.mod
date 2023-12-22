@@ -1,4 +1,4 @@
-module github.com/juanmoralesarias/registry
+module github.com/solvonetworks/radiusexporter
 
 go 1.14
 
