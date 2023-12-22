@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/juanmoralesarias/registry/freeradius"
+	"github.com/solvonetworks/radiusexporter/freeradius"
 	"github.com/prometheus/client_golang/prometheus"
 	"layeh.com/radius"
 	"layeh.com/radius/rfc2869"
@@ -193,11 +193,11 @@ func (f *FreeRADIUSClient) Stats() ([]prometheus.Metric, error) {
 		if err != nil {
 			e := os.Remove("/liveness/fail")
 			_ = e
-			log.Printf("Borrando archivo liveness-fail")
+			// log.Printf("Borrando archivo liveness-fail")
 			return nil, fmt.Errorf("exchange failed: %w", err)
 		} else {
 			myfile, e := os.Create("/liveness/fail")
-			log.Printf("Creando archivo liveness-fail inc ini")
+			// log.Printf("Creando archivo liveness-fail inc ini")
 			_ = myfile
 			_ = e
 		}
