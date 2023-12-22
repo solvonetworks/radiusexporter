@@ -13,8 +13,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/juanmoralesarias/registry/client"
-	"github.com/juanmoralesarias/registry/collector"
+	"github.com/solvonetworks/radiusexporter/client"
+	"github.com/solvonetworks/radiusexporter/collector"
 )
 
 var version, commit, date string
@@ -77,7 +77,7 @@ func main() {
 	}
 
 	myfile, e := os.Create("/liveness/fail")
-	log.Printf("Creando archivo liveness-fail inc ini")
+	// log.Printf("Creando archivo liveness-fail inc ini")
 	_ = myfile
 	_ = e
 	log.Printf("Providing metrics at %s%s", *listenAddr, *metricsPath)
